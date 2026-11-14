@@ -1,0 +1,26 @@
+{
+  "version": "v38",
+  "official_auc": 0.832634,
+  "status": "user_reported",
+  "reported_date": "2026-10-29",
+  "portal_displayed_time": "22:12",
+  "timezone": "Europe/Dublin",
+  "rank_user_reported": 5,
+  "leader_user_reported": {
+    "team": "What?!",
+    "auc": 0.833064
+  },
+  "third_place_user_reported": {
+    "team": "Slopify⁶⁷",
+    "auc": 0.832967
+  },
+  "gap_to_leader": 0.00043,
+  "gap_to_third": 0.000333,
+  "previous_incumbent": "v33",
+  "previous_incumbent_auc": 0.832616,
+  "delta_vs_previous_incumbent": 1.8e-05,
+  "remaining_submissions_user_reported": 5,
+  "live_portal_checked": false,
+  "portal_uploads_this_workflow": 0,
+  "source": "User supplied scored submission history and leaderboard in this conversation."
+}

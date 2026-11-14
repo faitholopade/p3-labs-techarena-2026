@@ -1,0 +1,15 @@
+{
+  "version": "V142",
+  "reported_score": 0.832748,
+  "previous_best_v136": 0.832744,
+  "gain": 4e-06,
+  "reported_rank": 12,
+  "third_place_score": 0.834362,
+  "gap_to_third": 0.001614,
+  "submissions_remaining_snapshot": 8,
+  "reported_submitted_date": "2026-11-02 21:18",
+  "source": "User-provided portal snapshot; not independently live-verified",
+  "v38_repeat_score": 0.832634,
+  "v38_original_score": 0.832634,
+  "interpretation": "No observed scoring change for the repeated V38 file. Does not prove every portal detail unchanged."
+}

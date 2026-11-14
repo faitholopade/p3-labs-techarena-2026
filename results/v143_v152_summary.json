@@ -1,0 +1,302 @@
+{
+  "latest_public_best": {
+    "version": "V142",
+    "score": 0.832748,
+    "rank_in_user_snapshot": 12,
+    "third_place_score": 0.834362,
+    "gap_to_third": 0.001614,
+    "remaining_attempts_in_user_snapshot": 8
+  },
+  "new_submission_created": false,
+  "portal_uploads": 0,
+  "fixed_primary_recipes": 80,
+  "additional_fixed_combinations": 1,
+  "experiments": [
+    {
+      "version": "V143",
+      "fixed_recipes": 12,
+      "best_primary_recipe": {
+        "anchor": 80,
+        "mode": "joint",
+        "strength": 0.25,
+        "gains": {
+          "all": -1.441938000590337e-05,
+          "first_day": -1.300876465959444e-05,
+          "delayed": -1.870741279219601e-05,
+          "third_day": 1.154130943936682e-05
+        },
+        "logloss_change": 2.5852851263663545e-06,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V144",
+      "fixed_recipes": 4,
+      "best_primary_recipe": {
+        "mode": "joint",
+        "strength": 0.5,
+        "gains": {
+          "all": -2.4920256818994346e-05,
+          "first_day": -5.395577213940239e-05,
+          "delayed": 6.72267251733416e-05,
+          "third_day": 0.00011364579770911654
+        },
+        "logloss_change": 1.6985917141193463e-05,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V145",
+      "fixed_recipes": 12,
+      "best_primary_recipe": {
+        "leaves": 7,
+        "mode": "binary",
+        "strength": 0.25,
+        "gains": {
+          "all": -1.3548232356885848e-05,
+          "first_day": -2.3786786477186794e-05,
+          "delayed": 1.5200786076974282e-05,
+          "third_day": 3.375105617531293e-05
+        },
+        "logloss_change": 1.3393585834298172e-06,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V146",
+      "fixed_recipes": 20,
+      "best_primary_recipe": {
+        "model": "control15",
+        "mode": "logit",
+        "weight": 0.1,
+        "gains": {
+          "all": 5.869965478688677e-06,
+          "first_day": -1.3369218790915127e-05,
+          "delayed": 7.57435423274222e-05,
+          "third_day": -2.1681712970678113e-05
+        },
+        "logloss_change": 1.2000917014032275e-05,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V147",
+      "fixed_recipes": 8,
+      "best_primary_recipe": {
+        "correlation": 1.0,
+        "mode": "choice",
+        "strength": 1.0,
+        "gains": {
+          "all": 2.2607606780300493e-05,
+          "first_day": 2.57220455908147e-05,
+          "delayed": 1.220581682814803e-05,
+          "third_day": -1.1142590065404967e-05
+        },
+        "logloss_change": -4.7752467099704266e-06,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V148",
+      "fixed_recipes": 12,
+      "best_primary_recipe": {
+        "model": "k8_p32",
+        "strength": 0.25,
+        "gains": {
+          "all": -6.328685738021811e-06,
+          "first_day": -1.2607721342927647e-05,
+          "delayed": 1.0194648370931425e-05,
+          "third_day": 4.437638867504923e-05
+        },
+        "logloss_change": 3.851025633772043e-06,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V149",
+      "fixed_recipes": 6,
+      "best_primary_recipe": {
+        "model": "k4_p32",
+        "strength": 0.25,
+        "gains": {
+          "all": 2.2222054358866927e-06,
+          "first_day": 4.489330142187775e-06,
+          "delayed": -6.556307851846022e-06,
+          "third_day": 2.6606436046239246e-05
+        },
+        "logloss_change": 4.788712508474458e-07,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    },
+    {
+      "version": "V152",
+      "fixed_recipes": 6,
+      "best_primary_recipe": {
+        "ridge": 0.1,
+        "strength": 0.25,
+        "gains": {
+          "all": 2.318335129425364e-07,
+          "first_day": 1.1315101242637127e-06,
+          "delayed": -2.393138486267432e-06,
+          "third_day": 2.0399345255439627e-05
+        },
+        "logloss_change": 4.593623781357081e-08,
+        "eligible": false
+      },
+      "primary_threshold_passed": false
+    }
+  ],
+  "v150_confirmation": {
+    "primary": {
+      "metrics": {
+        "all": {
+          "baseline_auc": 0.8183224152668225,
+          "candidate_auc": 0.8183450228736028,
+          "gain": 2.2607606780300493e-05
+        },
+        "first_day": {
+          "baseline_auc": 0.8250708500162273,
+          "candidate_auc": 0.8250965720618181,
+          "gain": 2.57220455908147e-05
+        },
+        "delayed": {
+          "baseline_auc": 0.7988903245817274,
+          "candidate_auc": 0.7989025303985555,
+          "gain": 1.220581682814803e-05
+        },
+        "third_day": {
+          "baseline_auc": 0.7905936517668612,
+          "candidate_auc": 0.7905825091767958,
+          "gain": -1.1142590065404967e-05
+        }
+      },
+      "logloss_change": -4.7752467099704266e-06,
+      "all_calendar_slices_positive": false
+    },
+    "secondary": {
+      "metrics": {
+        "all": {
+          "baseline_auc": 0.8379466691308189,
+          "candidate_auc": 0.8379490435653502,
+          "gain": 2.3744345312159965e-06
+        },
+        "saturday": {
+          "baseline_auc": 0.8356504460409352,
+          "candidate_auc": 0.8356471848733744,
+          "gain": -3.2611675607752133e-06
+        },
+        "sunday": {
+          "baseline_auc": 0.8402250286661572,
+          "candidate_auc": 0.8402329727961151,
+          "gain": 7.944129957859758e-06
+        }
+      },
+      "logloss_change": -7.324639281491852e-07,
+      "all_calendar_slices_positive": false
+    },
+    "secondary_confirmation_passed": false,
+    "original_primary_gate_passed": false,
+    "scope": "Reused V142 proxies; exact V142 heldout head unavailable."
+  },
+  "v151_primary": {
+    "metrics": {
+      "all": {
+        "baseline_auc": 0.8183224152668225,
+        "candidate_auc": 0.8183471465128795,
+        "gain": 2.473124605706367e-05
+      },
+      "first_day": {
+        "baseline_auc": 0.8250708500162273,
+        "candidate_auc": 0.8251008347574643,
+        "gain": 2.9984741237054635e-05
+      },
+      "delayed": {
+        "baseline_auc": 0.7988903245817274,
+        "candidate_auc": 0.7988987451464868,
+        "gain": 8.420564759470395e-06
+      },
+      "third_day": {
+        "baseline_auc": 0.7905936517668612,
+        "candidate_auc": 0.790608889312657,
+        "gain": 1.5237545795798724e-05
+      }
+    },
+    "logloss_change": -4.28993027082325e-06,
+    "date_checks_passed": true,
+    "normal_release_minimum_passed": false,
+    "scope": "Reused V142 proxies, adaptive fixed combination"
+  },
+  "v151_secondary": {
+    "metrics": {
+      "all": {
+        "baseline_auc": 0.8379466691308189,
+        "candidate_auc": 0.8379359515072169,
+        "gain": -1.0717623602052306e-05
+      },
+      "saturday": {
+        "baseline_auc": 0.8356504460409352,
+        "candidate_auc": 0.8356305181469671,
+        "gain": -1.992789396809691e-05
+      },
+      "sunday": {
+        "baseline_auc": 0.8402250286661572,
+        "candidate_auc": 0.8402228091132281,
+        "gain": -2.219552929116908e-06
+      }
+    },
+    "logloss_change": 1.049378460571404e-06,
+    "date_checks_passed": false,
+    "normal_release_minimum_passed": false,
+    "scope": "Reused V142 proxies, adaptive fixed combination"
+  },
+  "v151_primary_bootstrap": {
+    "replicates": 400,
+    "seed": 20261101,
+    "unit": "user",
+    "method": "paired Poisson weights with exact tie-aware weighted AUC",
+    "users": 47928,
+    "baseline_auc": 0.8183224152668225,
+    "candidate_auc": 0.8183471465128795,
+    "point_gain": 2.473124605706367e-05,
+    "interval_95": [
+      -7.787674094791863e-06,
+      6.240317761561641e-05
+    ],
+    "positive_replicates": 375,
+    "lower_bound_positive": false,
+    "seconds": 15.744803428649902,
+    "development_reuse_limit": "No multiple-search correction; not an untouched holdout."
+  },
+  "runtime_improvement": {
+    "cache_optimization_max_errors": {
+      "indices": 0.0,
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "1.0": 0.0
+    },
+    "exact_prediction_parity": true,
+    "elapsed_seconds": 31.005866765975952,
+    "previous_prediction_seconds": 118.71580338478088
+  },
+  "limitations": [
+    "Repeatedly reused development data; conditional bootstrap intervals do not account for adaptive search",
+    "Exact V142 heldout heads unavailable; validation uses V142 proxies",
+    "No claim that these experiments exhaust possible improvements or that the public optimum has been reached"
+  ],
+  "decision": "Retain scored V142. No new candidate passed the stated release/confirmation checks.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "torch": "2.5.1+cpu",
+    "lightgbm": "4.6.0"
+  }
+}

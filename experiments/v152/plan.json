@@ -1,0 +1,22 @@
+{
+  "version": "V152",
+  "hypothesis": "Preferences may vary continuously within the four6-hour time buckets. Existing global time-bucket corrections cannot express these changes.",
+  "model": "Four sine/cosine basis terms at daily frequencies1and2, each analytically centeredwithin its6-hour bucket; interact with16 fixed normalized catalog coordinates. Four unrestricted bucket-specific16D nuisance vectors absorb existing bucket/global offsets. Fit only real clicked slates before cutoff, conditional choice likelihood.",
+  "fit": "Convex linear conditional-logit likelihood plus ridge.01 or.1; deterministic L-BFGS-B maxiter70 with analytic gradient. No warm-up pseudo-negatives.",
+  "recipes": {
+    "ridges": [
+      0.01,
+      0.1
+    ],
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cap": 0.2,
+    "output": "Only within-bucket harmonic effect, centeredwithin event before cap; preserve V142 event mass."
+  },
+  "screen": "Primary at least+.00005 and all calendar slices nonnegative, nonworse logloss. Smaller consistent gains may advance only under a separate explicitly exploratory confirmation plan. Freeze before secondary; both dates must improve.",
+  "limits": "Reused V142 proxies; exact heldout V142 heads unavailable; finite set of real training days.",
+  "portal_uploads": 0
+}

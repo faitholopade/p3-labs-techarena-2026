@@ -1,0 +1,26 @@
+{
+  "version": "V143",
+  "hypothesis": "The fixed SVD exposure catalog may be a major bottleneck. Learn a nonlinear exposure likelihood from every historical candidate display, while anchoring the item coordinates to their existing frame, then transfer the changed catalog into the incumbent click predictor.",
+  "data": "Only real displayed candidates strictly before each cutoff; no future displays or outcomes. 10 positive exposures/event,40 global frequency-noise samples, exact NCE noise-density correction.",
+  "training": "Two catalog anchor precisions20 and80; independent exposure-user8D factors and intercepts plus item intercept. Start exposure-user vectors at regularized inverse-covariance mean display profiles. Six fixed Adam epochs, lr.02 cosine to.004, batch2048. All initial click-model user/item preferences and click exposure-user parameters remain unchanged.",
+  "priors": "Exposure-user L2 precision1; exposure item anchored L2 precision20 or80; item-bias shift precision20 and user-intercept shift precision1. Loss per positive exposure.",
+  "prediction": "256 common antithetic Sobol samples; replace exposure catalog only. Compare against original using bounded.3 utility delta.",
+  "recipes": {
+    "anchor_precisions": [
+      20,
+      80
+    ],
+    "modes": [
+      "choice",
+      "joint"
+    ],
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ]
+  },
+  "screen": "Primary V142 proxy overall at least+.00005, first-day/delayed/third-day nonnegative, nonworse logloss. Freeze winner before secondary; require both dates and combined positive.",
+  "limits": "Reused validation proxies; exact V142 heldout heads unavailable. Large public gain or rank not guaranteed.",
+  "portal_uploads": 0
+}

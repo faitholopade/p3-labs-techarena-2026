@@ -1,0 +1,16 @@
+{
+  "version": "v51",
+  "official_auc": 0.832677,
+  "reported_at": "2026-10-30 16:52 Europe/Dublin",
+  "source": "Faith supplied portal submission and leaderboard text",
+  "previous_best": "v45",
+  "previous_best_auc": 0.832655,
+  "official_gain": 2.2e-05,
+  "rank": 6,
+  "third_score": 0.832968,
+  "gap_to_third": 0.000291,
+  "fifth_score": 0.832692,
+  "gap_to_fifth": 1.5e-05,
+  "remaining_attempts_reported": 7,
+  "portal_uploads_by_agent": 0
+}

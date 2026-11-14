@@ -1,0 +1,23 @@
+{
+  "version": "V149",
+  "hypothesis": "Sparse item-context residuals need deterministic optimization: V148 minibatch training loss stayed above its nested control in early epochs, indicating optimizer noise. Refit the same4-context model and nuisance control using full-batch L-BFGS and a fixed warm comparison set.",
+  "data": "Same pre-cutoff real clicked slates and unique warm-up clicks; sample9 exposure-pool alternatives once withseed149026. Frozen mean-factor offsets, no query outcomes.",
+  "models": [
+    "control",
+    "k4_p8",
+    "k4_p32"
+  ],
+  "optimizer": "Start from zero; L-BFGS-B maxiter40,maxcor6,gtol1e-8,ftol1e-11. Analytic gradient includes per-item context centering. Same precision20 global/warm, context8or32; objective normalized bynumber training clicks. Report actual convergence.",
+  "recipes": {
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "mode": "choice",
+    "cap": 0.3
+  },
+  "screen": "Primary at least+.00005, all calendar slices nonnegative and nonworse logloss; freeze winner before secondary; each date positive.",
+  "limits": "Plan recorded before V148 query scores; reused V142 proxies. Warm alternative sets approximated. Exact V142 heldout head unavailable.",
+  "portal_uploads": 0
+}

@@ -1,0 +1,58 @@
+{
+  "cache_sha256": {
+    "components.npz": "a9192a5b60fd59aeb4ed125ea3f31cfe5252d57bb4bcc29b11dab19c19b3f6ee",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "reproduction.json": "9a1577f8b9d0f301627b006fa126a6c0c04d7dbe11e8da9178a5ce8f3796fee3"
+  },
+  "data_sha256": {
+    "audit.json": "2564a30e1161964c04046060845a7eef2b9a18168759cc99c93178978ba804a2",
+    "evaluation.npz": "730eb0485534a15ae5d751195307e8825e34a36d83eaf0bb3f243cdfb568a2ee",
+    "evaluation_rowids.npy": "38a19089ef8dc812b1a0abf0d7d5b2266dd01341e6d222de1aebe1e614c17e51",
+    "train.npz": "b52b45caab8a2ee9931bbc2f792d5811f56f8c6af99fb428c889d09f98f992e3"
+  },
+  "decision": "Standing exploratory authorization; normal gate not met",
+  "evidence_sha256": "3c3f45eea6d84b702b14a374687f052017e1bf1f16334fcd59e3bed4bbeef41a",
+  "experiment_plan_sha256": "bd89657679fe105aa0459928e8b3e7301957c7489c42b13b60013db9337e4359",
+  "heads": [
+    {
+      "feature_set": "memory",
+      "name": "v29_head",
+      "path": "artifacts/v29/head.pt",
+      "sha256": "65e358822140c536a8589077d1daeaf30a4f4a2b51a660c44ca74b122472c860",
+      "weight": 0.25
+    }
+  ],
+  "memory_factor_sha256": "34f573ccaf6fbd2245a6cdf10630eceeb79212b144f6a552a2704ab134514327",
+  "official_auc": null,
+  "portal_uploads": 0,
+  "required_v20_csv_sha256": "3e82021c98bec56bce493b3a56a335b8778e124388293ae5035496bd358c01c5",
+  "selected": {
+    "both_dates_improve": true,
+    "gains": {
+      "combined": 3.3868462368746854e-05,
+      "earlier": 4.669013284397394e-05,
+      "later": 2.092138445819458e-05
+    },
+    "head_auc": 0.8372573974586642,
+    "logloss_change": -1.2436880885813295e-05,
+    "mode": "replace_pooled_head",
+    "name": "pooled_memory_replace_pooled_head_0.25",
+    "variant": "pooled_memory",
+    "weight": 0.25
+  },
+  "source_sha256": {
+    "inference": "e2876f2ebc262a8147b3998c03748a4671d0195dfb117fb7e645e7bba9b83c60",
+    "training": "6f61fbbcb9835e94ae9f73f3bf4a0af980a1e4e9f5d886a6a44da8f0f30babc5"
+  },
+  "training_config": {
+    "columns": 388,
+    "head_average_with_v27": false,
+    "rank_weight": 0.5,
+    "seed": 20261029
+  },
+  "training_events": 391710,
+  "v20_weight": 0.75,
+  "variant": "pooled_memory",
+  "version": "v29"
+}

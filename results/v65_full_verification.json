@@ -1,0 +1,16 @@
+{
+  "full_model": {
+    "path": "artifacts/v65/research/full/model.pt",
+    "restore_to": "full/model.pt",
+    "bytes": 52241,
+    "sha256": "f4233f0b61cb21425f3c3bafd242013ce777fa6264ce0db1c87f346ba0b88e13",
+    "git_blob_sha1": "52fe13aa9748754355719de604fa61f51236897b"
+  },
+  "feature_count": 51,
+  "training_events": 588310,
+  "full_base_exact_nested_equality": true,
+  "plan_and_source_hashes_match": true,
+  "selected_strength": 1.0,
+  "official_score": null,
+  "portal_uploads": 0
+}

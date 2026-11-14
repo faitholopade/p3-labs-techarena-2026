@@ -1,0 +1,10 @@
+{
+  "version": "V128",
+  "purpose": "One fixed complementary correction to V108, requested as the next submission candidate.",
+  "recipe": {"context_source":"V119 fixed ridge0.01 model", "context_strength":1.0, "history_source":"V125 conditional posterior with warm likelihood weight 2", "history_strength":0.25, "combination":"Add the two centered conditional-log-probability corrections; preserve incumbent event click mass."},
+  "rationale": "The context and history corrections have different first-day versus delayed-query error patterns. Test their single prespecified combination; no day mask, inversion, or grid search.",
+  "primary": {"cutoff":1737676800,"minimum_overall_auc_gain":0.00005,"first_day_positive":true,"delayed_positive":true,"third_day_nonnegative":true,"logloss_nonworse":true},
+  "confirmation": {"weekend_overall_auc_positive":true,"both_weekend_dates_positive":true,"both_weekdays_nonnegative":true,"paired_user_bootstrap_replicates":400,"seed":20261101,"primary_95_percent_lower_bound_positive":true,"weekend_95_percent_lower_bound_positive":true},
+  "limits": ["Development outcomes have been reused; this is not an untouched holdout.","All validation comparisons use V65 components or full matched V65, because V108 training checkpoints are unavailable.","Even if gates pass, transfer to the exact V108 submission is exploratory and can regress publicly.","V125 alone failed its original primary gate; this new combined recipe does not change that result."],
+  "automatic_portal_upload":false
+}

@@ -1,0 +1,28 @@
+{
+  "rows": 529390,
+  "id_order_exact": true,
+  "max_absolute_error": 7.280000002829468e-08,
+  "mean_absolute_error": 1.1748715231903598e-09,
+  "absolute_tolerance": 1e-07,
+  "maximum_event_probability": 0.97941448907624,
+  "passed": true,
+  "version": "v65",
+  "csv_sha256": "c40257faeafc39939280d8c694fbcbfa61c96bbe16a6958ba35a8196bffaeda4",
+  "byte_identical_to_scored_file": false,
+  "reference_csv_sha256": "d541041a61c559d5d3e36f4a9c9121b70239d83861ca9734bb3eb64a5d3f8590",
+  "verification_mode": "fresh_saved_model_inference",
+  "original_and_compatibility_sources_verified": 122,
+  "seconds": 381.99079605299994,
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "torch": "2.5.1+cpu",
+    "lightgbm": "4.6.0",
+    "numba": "0.62.1"
+  },
+  "scope": "Saved-model numerical reproduction on fixed Phase 1 evaluation; no retraining",
+  "full_training_reproduced": false,
+  "benchmark_reproduction_verified": false
+}

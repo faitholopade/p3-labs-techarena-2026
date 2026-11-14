@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "version": "v142",
+  "rows": 529390,
+  "csv_sha256": "23897eb33f1d288349838f34493608e52578551d697a17d9addc731af433a2dc",
+  "byte_identical_to_scored_file": true,
+  "event_mass_max_error": 4.440892098500626e-16,
+  "scope": "Saved V136 prediction replay plus saved V142 correction; fixed Phase 1 evaluation only",
+  "full_training_reproduced": false,
+  "new_data_supported": false
+}

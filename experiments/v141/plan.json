@@ -1,0 +1,18 @@
+{
+  "version": "V141",
+  "hypothesis": "The context bit above hour-of-day denotes weekend, not device. Warm-up click timestamps include an earlier weekend, providing information about weekend catalog preferences even before the Friday validation cutoff. Model weekend-minus-weekday preference effects in fixed16D item coordinates.",
+  "training": "Past clicked real slates and unique warmup clicks with9 exposure-cluster pool alternatives; warm weight1. Fit16D real-time-of-day nuisance terms and separate16D warm-time-of-day nuisance terms; shared weekend effects (16D or four-by16D), centered at2/7. Ridge.03, cap.3 on total correction, up to70 L-BFGS iterations. Fixed factor offsets, all means untouched.",
+  "variants": [
+    "shared",
+    "byhour"
+  ],
+  "strengths": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "application": "Only learned weekend contrast times (weekend-2/7), cap.2; preserve incumbent V136 event mass. Existing V136 hour correction retained.",
+  "screen": "Primary overall >=.00005, firstday/delayed/third-day nonnegative, nonworse logloss. Select before secondary; secondary both days and combined positive.",
+  "limits": "Warm alternatives sampled not observed; likelihood approximate. Reused development V136 proxies; exact V136 heldout head missing.",
+  "portal_uploads": 0
+}

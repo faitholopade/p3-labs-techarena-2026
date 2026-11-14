@@ -1,0 +1,21 @@
+{
+  "version": "V139",
+  "hypothesis": "Updating item catalog factors as well as users may improve generalization; original factor-users-only continuation fixed the catalog. Transfer full-factor continuation from V138 versus original V17 factors, separate from V138 angular-versus-control hypothesis.",
+  "arms": [
+    "control",
+    "angular"
+  ],
+  "modes": [
+    "choice",
+    "joint"
+  ],
+  "strengths": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "cap": 0.3,
+  "selection": "Primary >=.00005; all calendar slices nonnegative, nonworse logloss. Select largest primary gain before secondary fits. Secondary combined and each day positive.",
+  "limits": "Adaptive new comparison after V138 matched contrast failed; repeatedly reused V136 validation proxies, not exact V136 heldout predictions.",
+  "portal_uploads": 0
+}

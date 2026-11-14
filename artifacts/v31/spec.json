@@ -1,0 +1,50 @@
+{
+  "cache_sha256": {
+    "components.npz": "a9192a5b60fd59aeb4ed125ea3f31cfe5252d57bb4bcc29b11dab19c19b3f6ee",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "reproduction.json": "9a1577f8b9d0f301627b006fa126a6c0c04d7dbe11e8da9178a5ce8f3796fee3"
+  },
+  "created_on": "2026-10-29",
+  "data_sha256": {
+    "audit.json": "2564a30e1161964c04046060845a7eef2b9a18168759cc99c93178978ba804a2",
+    "evaluation.npz": "730eb0485534a15ae5d751195307e8825e34a36d83eaf0bb3f243cdfb568a2ee",
+    "evaluation_rowids.npy": "38a19089ef8dc812b1a0abf0d7d5b2266dd01341e6d222de1aebe1e614c17e51",
+    "train.npz": "b52b45caab8a2ee9931bbc2f792d5811f56f8c6af99fb428c889d09f98f992e3"
+  },
+  "decision": "Standing exploratory authorization below unchanged normal gain threshold; matched and weekday/forward checks pass.",
+  "each_pooled_head_training_events": 391710,
+  "evidence_sha256": "726a9210505b22701a0535e51cfd64451d95f3620159e5b186e3b308ffe0504e",
+  "formula": "0.5*V27+0.5*V29 = 0.75*V20+0.125*V27_head+0.125*V29_memory_head",
+  "heads": [
+    {
+      "feature_set": "base",
+      "name": "v27_head",
+      "path": "artifacts/v27/pooled_head.pt",
+      "sha256": "58cc53c612ead000733cf7dfd932a8c83b976d395b4313a578aa88305a17aad4",
+      "weight": 0.125
+    },
+    {
+      "feature_set": "memory",
+      "name": "v29_head",
+      "path": "artifacts/v29/head.pt",
+      "sha256": "65e358822140c536a8589077d1daeaf30a4f4a2b51a660c44ca74b122472c860",
+      "weight": 0.125
+    }
+  ],
+  "memory_factor_sha256": "34f573ccaf6fbd2245a6cdf10630eceeb79212b144f6a552a2704ab134514327",
+  "new_training_fits": 0,
+  "official_auc": null,
+  "plan_sha256": "070f0cc91a8002fc593bf67bffa407b79c35f6951afbbbcac836084eac01c0de",
+  "portal_uploads": 0,
+  "required_v20_csv_sha256": "3e82021c98bec56bce493b3a56a335b8778e124388293ae5035496bd358c01c5",
+  "required_v27_csv_sha256": "3cda208bb200f6b250a24a9b328cd42999bf801dd64dfb697c28c3aeae2070f6",
+  "required_v29_csv_sha256": "21715eadd8a4be4545012fc7769f48c4d3845b1e6825cfde608af402d4949326",
+  "selection_sha256": "255677b710863102014cf98a8855d7d43d420a42f2a8de5f5774f7ded4baf9fb",
+  "source_sha256": {
+    "base_inference": "e2876f2ebc262a8147b3998c03748a4671d0195dfb117fb7e645e7bba9b83c60",
+    "wrapper": "57cc16db154153c3b43b982d4a2947e0dc04b8e3fbf013a201c26f485fb9c300"
+  },
+  "v20_weight": 0.75,
+  "version": "v31"
+}

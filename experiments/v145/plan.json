@@ -1,0 +1,35 @@
+{
+  "version": "V145",
+  "hypothesis": "Nonlinear interactions between aligned user/item latent coordinates may correct systematic errors that scalar similarity features and previous linear context corrections missed.",
+  "validation": "Train on first-per-user Thursday queries using pre-Thursday factors; test the pre-Friday frozen first-future-query cohort. Secondary Saturday model trains Thursday+Friday; Sunday model trains Thursday+Friday+Saturday. Full model uses all4 causal first-query cohorts Thursday-Sunday. All daily coordinates aligned to pre-Thursday catalog by label-free orthogonal Procrustes.",
+  "models": "Paired LightGBM binary offset models, one with scalar factor/uncertainty/history/count/context features, the other adding32 raw aligned user/item coordinates and128 preference/exposure outer products. Fixed init logits from mean-utility11way factor softmax; predict treated-minus-control residual logit contrast.",
+  "training": {
+    "leaves": [
+      7,
+      15
+    ],
+    "rounds": 250,
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "min_data_in_leaf": 2000,
+    "lambda_l2": 20,
+    "num_threads": 3,
+    "deterministic": true,
+    "no_early_stopping": true
+  },
+  "recipes": {
+    "modes": [
+      "choice",
+      "binary"
+    ],
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cap": 0.25
+  },
+  "screen": "Primary >=.00005, firstday and delayed positive, third nonnegative and logloss nonworse. Select before secondary; both weekend dates and combined positive.",
+  "limits": "Reused V142 proxies; delta transfer from paired auxiliary heads, not exact V142 end-to-end validation. Forecast factor training size and dates differ from production.",
+  "portal_uploads": 0
+}

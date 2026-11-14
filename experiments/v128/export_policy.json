@@ -1,0 +1,11 @@
+{
+  "v128_primary_bootstrap_gate_passed": false,
+  "v128_primary_interval_95": [
+    -4.8259339887890526e-06,
+    0.00021425983552712514
+  ],
+  "meaning": "V128 is not a fully validated release. Original gates remain unchanged.",
+  "user_request": "User specifically requested the next submission after the prior research-only result. Prior session authorizes exploratory risks.",
+  "next_action": "Test one fixed conservative fallback (V129): halve only the new history correction, keep the previously fitted context correction unchanged. Freeze before evaluating fallback. Confirm on other dates and report all results.",
+  "automatic_upload": false
+}

@@ -1,0 +1,27 @@
+{
+  "version": "V138",
+  "hypothesis": "The normalized Gaussian preference factors live on a sphere, but existing training penalizes the unnormalized8D Gaussian. Replacing that surrogate with the angular distribution KL to a uniform spherical prior may improve joint item/user uncertainty and embedding estimates.",
+  "arms": [
+    "matched Gaussian-KL continuation control",
+    "projected-normal angular-KL treatment"
+  ],
+  "training": "All preference item/user means and scalar stds, exposure-user parameters, outside/item biases and global scales train for6 fixed epochs atlr.001 cosine to.0002. Exposure catalog stays fixed. Same real/warm batches, negative samples, antithetic latent draws, and32 rank pairs; warmweight2, rankweight.5, preferenceKLweight.25, exposureKLweight.5, priorvariance.5.",
+  "angular_kl": "KL=E[log I7(kappa*cos(theta))-.5*kappa^2-log I7(0)], with I7(a)=integral r^7 exp(-r^2/2+a*r)dr. kappa=norm(mu)/sigma. Deterministic Gauss-Hermite x generalized Gauss-Laguerre64x64 lookup over1025 log-kappa values [-8,6]; verify against96x96 and use piecewise-linear differentiable interpolation.",
+  "inference": "256 common antithetic Sobol latent samples; compare treatment to matched control.",
+  "recipes": {
+    "modes": [
+      "choice",
+      "joint"
+    ],
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "utility_delta_cap": 0.3
+  },
+  "screen": "Primary gain>=.00005, first and delayed positive, third nonnegative, nonworse logloss; secondary combined and each date positive. Original larger release threshold retained as a limitation.",
+  "baseline": "Exact V136 for export; V136 proxies for validation.",
+  "limits": "Reused development data; V108/V136 exact heldout head missing; approximate numerical angular KL and factorized variational family.",
+  "portal_uploads": 0
+}

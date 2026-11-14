@@ -1,0 +1,120 @@
+{
+  "plan": {
+    "version": "v65_six_day_event_mass",
+    "incumbent": "v63",
+    "official_incumbent_auc": 0.832698,
+    "timing": "Fixed before fitting or scoring any V65 model.",
+    "hypothesis": "A small event-only correction may improve user click propensity without disturbing conditional item choice learned by the incumbent.",
+    "base": "Exact saved V50 plain16 head for each held-user fold, chronological or full stage; unchanged.",
+    "features": "User/history/activity columns explicitly named in event_mass_correction.py, plus frozen V50 event logit. Event columns are checked constant across every slate. No item ID, user ID, labels or raw weekend indicator as features.",
+    "training": {
+      "epochs": 12,
+      "width": 16,
+      "threads": 2,
+      "rank_weight": 0.5,
+      "lr": 0.001,
+      "weight_decay": 0.1,
+      "batch_events": 1024,
+      "dropout": 0.1,
+      "average_last_epochs": 5,
+      "bound": 0.5
+    },
+    "recipes": [
+      {
+        "name": "event_strength_0.25",
+        "strength": 0.25
+      },
+      {
+        "name": "event_strength_0.5",
+        "strength": 0.5
+      },
+      {
+        "name": "event_strength_1.0",
+        "strength": 1.0
+      }
+    ],
+    "formula": "V63 conditional candidate probabilities multiplied by sigmoid(logit(V63 event mass)+strength*V65 bounded event-logit delta).",
+    "selection": "Require combined matched gain >=.000010, both matched dates positive, non-worsening log loss, and both weekday changed-component gains positive. Highest eligible gain; within .000005 prefer smaller strength.",
+    "confirmation": "Only preselected eligible recipe gets chronological first-Friday component scoring and 400 paired-user bootstrap seed20261030. No retuning.",
+    "limits": "Adaptive idea after prior propensity experiments. Base head trained on same fitting users; validation users excluded from base and correction across all six days. Daily features causal but calibration pools other-user dates. Weekday/forward diagnostics omit unchanged historical V17/V20. Reused development cohorts and conditional uncertainty do not guarantee public gain.",
+    "normal_gain_gate": 0.0001,
+    "scarce_slot_gain_gate": 0.0002,
+    "portal_uploads": 0,
+    "seed": 20261030
+  },
+  "plan_sha256": "9b4db1e6bc22b971b427906795620cfdf78d36c2de1262864a9c8968ff2b3f43",
+  "source_sha256": "483571bbf411af9d131d9ff93cb1f9062e607e459f5fd40cdafe67694aa71757",
+  "baseline_auc": 0.8378351482608294,
+  "results": [
+    {
+      "recipe": {
+        "name": "event_strength_0.25",
+        "strength": 0.25
+      },
+      "gains": {
+        "combined": 6.178307506932157e-06,
+        "earlier": 6.071835351950661e-06,
+        "later": 6.581967194940752e-06
+      },
+      "logloss_change": -1.1377510041876704e-06,
+      "weekday_component_gains": {
+        "thursday": 3.249326283483178e-06,
+        "friday": 2.2821373394377176e-06
+      },
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "event_strength_0.5",
+        "strength": 0.5
+      },
+      "gains": {
+        "combined": 1.0958551664330685e-05,
+        "earlier": 1.0877573551337782e-05,
+        "later": 1.1603356013356603e-05
+      },
+      "logloss_change": -1.6893432900066951e-06,
+      "weekday_component_gains": {
+        "thursday": 4.339410243026087e-06,
+        "friday": 3.212640952043877e-06
+      },
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "event_strength_1.0",
+        "strength": 1.0
+      },
+      "gains": {
+        "combined": 1.7425292258455016e-05,
+        "earlier": 1.6818114967787068e-05,
+        "later": 1.8085978939375025e-05
+      },
+      "logloss_change": -1.014657191211743e-06,
+      "weekday_component_gains": {
+        "thursday": 2.8308143974475897e-06,
+        "friday": 1.3257286841650284e-06
+      },
+      "eligible": true
+    }
+  ],
+  "selected": {
+    "recipe": {
+      "name": "event_strength_1.0",
+      "strength": 1.0
+    },
+    "gains": {
+      "combined": 1.7425292258455016e-05,
+      "earlier": 1.6818114967787068e-05,
+      "later": 1.8085978939375025e-05
+    },
+    "logloss_change": -1.014657191211743e-06,
+    "weekday_component_gains": {
+      "thursday": 2.8308143974475897e-06,
+      "friday": 1.3257286841650284e-06
+    },
+    "eligible": true
+  },
+  "official_score": null,
+  "portal_uploads": 0
+}

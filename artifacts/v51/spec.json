@@ -1,0 +1,63 @@
+{
+  "version": "v51",
+  "created_on": "2026-10-30",
+  "incumbent": "v45",
+  "official_incumbent_auc": 0.832655,
+  "official_score": null,
+  "portal_uploads": 0,
+  "recipe": {
+    "name": "both_half",
+    "base": 0.5,
+    "memory": 0.5
+  },
+  "formula": "V45 + 0.095703125*base_fraction*(narrow-old_base) + 0.095703125*memory_fraction*(narrow-old_memory)",
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "authorization": "Standing request to prepare the strongest supported next exploratory submission, renewed after official V45. Manual portal upload remains with Faith.",
+  "normal_quality_gate": false,
+  "last_two_quality_gate": false,
+  "positive_bootstrap_lower_bound": true,
+  "required_v45_spec_sha256": "8b58d3e8022cdd4d86f9cb5c1820cc85f83d3b6836d7435621c68d1ca257506e",
+  "required_v45_csv_sha256": "d7d32d8a58fe5371fef288916d3749f1fe6c4711ec9ec4145c6102e173cf8a7b",
+  "required_v38_spec_sha256": "37817f330cfe534c7256d3d3b45f5c116adf64623ab460c4a18b6e120d1c941f",
+  "required_v38_csv_sha256": "95ef7daab9ec97ff6260d1d195bd28889e63f6c3b20b1cbbfafe7a02a56b38b3",
+  "source_sha256": {
+    "src/infer_narrow_six_day.py": "4cad031efb7975c1c5410148052ebfcd157a39669e633de9334cfbcbf2d8eae7",
+    "src/infer_v45.py": "0e89bd626127217fb1086d039d646bf190cbe0959f262e8a871e0a46d5311f2c",
+    "src/infer_v38.py": "a4dbdcf0f471b14ac26897633b7e0d8131dae50e44c91da314e03ab75f25d0d5"
+  },
+  "dependency_canonical_sha256": {
+    "src/calibration_model.py": "c5528e74eac7a7c34f1df2ead280384b675f781759fdfecf1ef11d243fb9ca9b",
+    "src/flexible_tree.py": "bf72495850fcd9d3addd120513c34d5cf838a42fc067b7732ff040ca0b414ed6",
+    "src/v25_exposure_memory.py": "1df32caf62ac7f2ee29b49903d1807e2d5a9a5e2cb293530300af70ad7f8eddb",
+    "src/v30_tree.py": "222d465ddb089ba4e6af09de48442072fdc0ad56dac7e5ce2cda4065304489ed",
+    "src/validate_submission.py": "1a9add6a2f7824fd39fc3ad0786b717ca074ec1eb4e65eb597ef0c0481d2a2c2"
+  },
+  "cache_sha256": {
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "components.npz": "e934710c71a580d05d08dff21ddbf4948b7999a8ca9f7f20cd61f1bb72ee0192"
+  },
+  "training_events": 588310,
+  "local_gains": {
+    "combined": 1.3181010951490713e-05,
+    "earlier": 2.413350890595467e-05,
+    "later": 2.6308491190008e-06
+  },
+  "logloss_change": -3.700676995566088e-06,
+  "weekday_component_gains": {
+    "thursday": 4.646095753102486e-05,
+    "friday": 1.7827379763413198e-05
+  },
+  "forward_component_gain": 5.251326296651371e-05,
+  "conditional_interval_95_percent": [
+    5.77538623955376e-07,
+    2.5819628020459775e-05
+  ],
+  "plan_sha256": "f5da99d71e43ccf003f7dbf98498b9105129b40781495ed4e8e6cbcce46ca866",
+  "research_source_sha256": "dc4890ebbafa46982c72e0ca0dfacfe9bc1670b802090a24f97861b905df03cc",
+  "limits": "Repeated development use. Other-user calibration dates are pooled. Weekday and forward checks omit unchanged V17/V20 components. Bootstrap is conditional on the selected recipe and excludes selection and public-distribution uncertainty. No promised public gain or rank.",
+  "new_head": {
+    "path": "artifacts/v51/narrow_head.pt",
+    "sha256": "87d1ae08ec655c27e79d749163d886241e89e64edfa5b1e7f9c0af45019d9b61"
+  }
+}

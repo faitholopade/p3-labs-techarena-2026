@@ -1,0 +1,15 @@
+{
+  "status": "mismatch_is_small_but_not_byte_identical",
+  "version": "v15",
+  "source_commit": "2b044b59cb95fa289fb992ab3b79336d68577277",
+  "rows": 529390,
+  "rowids_match": true,
+  "max_absolute_probability_error": 1.820000006258482e-08,
+  "mean_absolute_probability_error": 3.9467660253607747e-10,
+  "expected_csv_sha256": "5beff1139b0e520714ee513846ba6f62d3de0a2f83dbae48c8e789abc99c2049",
+  "actual_csv_sha256": "6e503e7cbff82baa968c3a6c94542d3eb02af7f215b6121ff306e72b03592951",
+  "torch": "2.5.1+cpu",
+  "lightgbm": "4.6.0",
+  "numba": "0.62.1",
+  "interpretation": "Confirms a strict CSV-byte gate failure on this Linux environment; does not resolve the separate benchmark discrepancy or establish its cause."
+}

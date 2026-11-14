@@ -1,0 +1,193 @@
+{
+  "plan": {
+    "version": "v51_narrow_remaining_transfers",
+    "created_on": "2026-10-30",
+    "incumbent": "v45",
+    "official_incumbent_auc": 0.832655,
+    "rank_reported": 6,
+    "remaining_attempts_reported": 8,
+    "timing": "Frozen before any V50 or V51 candidate scores; V50 narrow-head fits are running. V47 tree, V48 pooling and V49 strength screens failed.",
+    "hypothesis": "V46 showed that transferring the wider six-day head into older base/memory branches failed on the later date. Test the same fixed transfers with the newly fitted 16-unit head, which may preserve the narrower model's generalization benefits.",
+    "recipes": [
+      {
+        "name": "memory_half",
+        "base": 0,
+        "memory": 0.5
+      },
+      {
+        "name": "memory_full",
+        "base": 0,
+        "memory": 1
+      },
+      {
+        "name": "base_half",
+        "base": 0.5,
+        "memory": 0
+      },
+      {
+        "name": "base_full",
+        "base": 1,
+        "memory": 0
+      },
+      {
+        "name": "both_half",
+        "base": 0.5,
+        "memory": 0.5
+      },
+      {
+        "name": "both_full",
+        "base": 1,
+        "memory": 1
+      }
+    ],
+    "branch_weights": {
+      "base": 0.095703125,
+      "memory": 0.095703125
+    },
+    "unchanged": "V45 small and slate six-day branches, V17/V20 and old tree stay fixed. Reuse V50 fits; no additional fitting.",
+    "control": "Base and memory replacements change width from 32 to 16 and training window from four to six days. Base replacement also adds the existing memory features. This is not a pure data-only ablation.",
+    "selection": "Require >=0.000010 full matched AUC gain versus V45, both dates positive, non-worsening log loss and both normalized weekday component checks positive. Highest eligible gain; within 0.000005 prefer lower total replacement fraction, then memory-only transfer, then listed order.",
+    "confirmation": "Only selected recipe gets the fixed forward-Friday component check and 400 paired-user bootstrap, seed 20261030. No retuning. If V50 also passes, compare independently selected recipes on the same V45 baseline; select the larger eligible gain without combining recipes.",
+    "release": "Normal +0.000100, scarce +0.000200 and positive lower-bound gates remain; standing exploratory exceptions must be explicit. Manual portal upload only.",
+    "limitations": "Reused development dates and public score feedback. Reduced ensemble diversity may hurt. Weekday and forward checks omit unchanged historical branches. No P3 or public gain guarantee.",
+    "portal_uploads": 0
+  },
+  "plan_sha256": "f5da99d71e43ccf003f7dbf98498b9105129b40781495ed4e8e6cbcce46ca866",
+  "source_sha256": "dc4890ebbafa46982c72e0ca0dfacfe9bc1670b802090a24f97861b905df03cc",
+  "prediction_inputs_sha256": {
+    "plain": "61cf4979ea3e82df515b0b7cc6fc8309b52eb64ff21dfdd5c97c466962d91f26",
+    "slate": "79525b325cc503598b819dec8f68b127779b59b3e9a6938e6e7967a6140112f3",
+    "narrow": "b3c15779ebdd74b3f6b5fd04e3455f71237f1c52e2315ae0cabdbe9ae06a1793"
+  },
+  "baseline_auc": 0.8378046551733912,
+  "results": [
+    {
+      "recipe": {
+        "name": "memory_half",
+        "base": 0,
+        "memory": 0.5
+      },
+      "gains": {
+        "combined": 5.471517131705461e-06,
+        "earlier": 9.742363010545319e-06,
+        "later": 1.532603685627798e-06
+      },
+      "logloss_change": -1.4913684857897902e-06,
+      "weekday_component_gains": {
+        "thursday": 3.0008836776618253e-05,
+        "friday": 1.611584602367877e-05
+      },
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "memory_full",
+        "base": 0,
+        "memory": 1
+      },
+      "gains": {
+        "combined": 8.52793461458834e-06,
+        "earlier": 1.7056534978410198e-05,
+        "later": 3.1386238774633313e-07
+      },
+      "logloss_change": -1.9022484166464348e-06,
+      "weekday_component_gains": {
+        "thursday": 4.523402018485889e-05,
+        "friday": 1.98763717136341e-05
+      },
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "base_half",
+        "base": 0.5,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 9.514820876743713e-06,
+        "earlier": 1.650651250506563e-05,
+        "later": 2.939662416268085e-06
+      },
+      "logloss_change": -2.9478733599985762e-06,
+      "weekday_component_gains": {
+        "thursday": 2.7001689371086712e-05,
+        "friday": 8.47385826507896e-06
+      },
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "base_full",
+        "base": 1,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 1.5985168586141185e-05,
+        "earlier": 2.9906368823051643e-05,
+        "later": 2.6086058281249436e-06
+      },
+      "logloss_change": -4.714433788882699e-06,
+      "weekday_component_gains": {
+        "thursday": 3.792708166161507e-05,
+        "friday": 5.495886528761318e-06
+      },
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "both_half",
+        "base": 0.5,
+        "memory": 0.5
+      },
+      "gains": {
+        "combined": 1.3181010951490713e-05,
+        "earlier": 2.413350890595467e-05,
+        "later": 2.6308491190008e-06
+      },
+      "logloss_change": -3.700676995566088e-06,
+      "weekday_component_gains": {
+        "thursday": 4.646095753102486e-05,
+        "friday": 1.7827379763413198e-05
+      },
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "both_full",
+        "base": 1,
+        "memory": 1
+      },
+      "gains": {
+        "combined": 1.76567261215288e-05,
+        "earlier": 3.9261367203557995e-05,
+        "later": -3.539139576846928e-06
+      },
+      "logloss_change": -3.671384276177081e-06,
+      "weekday_component_gains": {
+        "thursday": 4.693806108113652e-05,
+        "friday": -5.083068192135443e-06
+      },
+      "eligible": false
+    }
+  ],
+  "selected": {
+    "recipe": {
+      "name": "both_half",
+      "base": 0.5,
+      "memory": 0.5
+    },
+    "gains": {
+      "combined": 1.3181010951490713e-05,
+      "earlier": 2.413350890595467e-05,
+      "later": 2.6308491190008e-06
+    },
+    "logloss_change": -3.700676995566088e-06,
+    "weekday_component_gains": {
+      "thursday": 4.646095753102486e-05,
+      "friday": 1.7827379763413198e-05
+    },
+    "eligible": true
+  },
+  "official_score": null,
+  "portal_uploads": 0
+}

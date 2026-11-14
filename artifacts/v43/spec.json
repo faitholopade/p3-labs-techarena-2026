@@ -1,0 +1,92 @@
+{
+  "version": "v43",
+  "created_on": "2026-10-30",
+  "recipe": "replace_both",
+  "incumbent": "v38",
+  "official_incumbent_auc": 0.832634,
+  "official_score": null,
+  "portal_uploads": 0,
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "authorization": "After receiving the V34-V37 hold report, the user requested: come on give me next submission we need to get back to p3 minimum and hold it. Prepare the strongest available unsubmitted candidate despite the disclosed uncertainty. Manual portal upload remains with the user. The continuation request retains the next-submission goal.",
+  "formula": "V38 + 0.109375*((old_small+small_20261030+small_20261031)/3-old_small) + 0.125*((old_slate+slate_20261030+slate_20261031)/3-old_slate)",
+  "new_heads": [
+    {
+      "name": "small_20261030",
+      "path": "artifacts/v43/small_20261030.pt",
+      "sha256": "ce6357ffc17c6570d7ec6b715833049212f643ae77cbec997cc9c611f245a45b",
+      "seed": 20261030,
+      "architecture": "plain",
+      "width": 16,
+      "training_events": 391710
+    },
+    {
+      "name": "small_20261031",
+      "path": "artifacts/v43/small_20261031.pt",
+      "sha256": "1ca61593a347357e47d67b5696ba949176d55f1443d9ce79fcf6129f080d9683",
+      "seed": 20261031,
+      "architecture": "plain",
+      "width": 16,
+      "training_events": 391710
+    },
+    {
+      "name": "slate_20261030",
+      "path": "artifacts/v43/slate_20261030.pt",
+      "sha256": "8bfa524a2a67ae699e65594a7753f4625df7c6879931fe13e2eac5f34b114af3",
+      "seed": 20261030,
+      "architecture": "set",
+      "width": 32,
+      "training_events": 391710
+    },
+    {
+      "name": "slate_20261031",
+      "path": "artifacts/v43/slate_20261031.pt",
+      "sha256": "df757da77faf36c574e0718061ef8dab3a526ed0426b8ad444b4c9c352962265",
+      "seed": 20261031,
+      "architecture": "set",
+      "width": 32,
+      "training_events": 391710
+    }
+  ],
+  "training_events": 391710,
+  "required_v38_spec_sha256": "37817f330cfe534c7256d3d3b45f5c116adf64623ab460c4a18b6e120d1c941f",
+  "required_v38_csv_sha256": "95ef7daab9ec97ff6260d1d195bd28889e63f6c3b20b1cbbfafe7a02a56b38b3",
+  "source_sha256": {
+    "src/infer_v43.py": "d3754072d3984b15fe30a369541304a54f0dc1e29c81555045b042bf16dd580e",
+    "src/infer_v38.py": "a4dbdcf0f471b14ac26897633b7e0d8131dae50e44c91da314e03ab75f25d0d5"
+  },
+  "dependency_canonical_sha256": {
+    "src/calibration_model.py": "c5528e74eac7a7c34f1df2ead280384b675f781759fdfecf1ef11d243fb9ca9b",
+    "src/flexible_tree.py": "bf72495850fcd9d3addd120513c34d5cf838a42fc067b7732ff040ca0b414ed6",
+    "src/v25_exposure_memory.py": "1df32caf62ac7f2ee29b49903d1807e2d5a9a5e2cb293530300af70ad7f8eddb",
+    "src/v30_tree.py": "222d465ddb089ba4e6af09de48442072fdc0ad56dac7e5ce2cda4065304489ed",
+    "src/validate_submission.py": "1a9add6a2f7824fd39fc3ad0786b717ca074ec1eb4e65eb597ef0c0481d2a2c2"
+  },
+  "training_source_sha256": {
+    "src/v33_training.py": "ce0d3005b762a6782f9baff0b2d1f20c73d199c79a2e7490a6cef04641ed31f9",
+    "scripts/research_v42.py": "39fe1855c733350b0f041418df70bcd0b4fec0c3fef46c304b345a8b7c4afd11",
+    "scripts/research_v43.py": "e490807ebcd683b141fa3cdab1e5c5ff81ddb7feab8589cde6872a8e32f9a79f"
+  },
+  "plan_sha256": {
+    "v42": "61b79d87b2bf5c6a93c7992079e7a7ba5e639f0e6925b6640446d642542f638e",
+    "v43": "dd9d5134afcb570850c31d41bc683e46a0c3ac8376ee62c90e380cf2ea8f4edd"
+  },
+  "evidence_sha256": "d54b96524d946e85813372e5176bfc4999e6e10464379fb7e5a2859e1f152a4a",
+  "selection_sha256": "446e6dc21c3b3f4db88cb3cbe24eb0a51a2aa177a742a747c8612fdccd23d90e",
+  "local_gain_vs_v38": 1.0392711011664169e-05,
+  "conditional_interval_95_percent": [
+    -2.3384974123991097e-06,
+    2.4674415978703785e-05
+  ],
+  "forward_component_gain": 4.58739527644525e-05,
+  "forward_sha256": "2881f3cc4b0d1a81ab1936f7b3476a80a971de7bca200e65b1db7041af8d7cfa",
+  "normal_quality_gate": false,
+  "scarce_slot_quality_gate": false,
+  "positive_bootstrap_lower_bound": false,
+  "cache_sha256": {
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "components.npz": "e934710c71a580d05d08dff21ddbf4948b7999a8ca9f7f20cd61f1bb72ee0192"
+  },
+  "cache_provenance": "Raw/names exactly match the immutable V33 cache specification. Components were regenerated from verified saved models; the resulting V38 CSV is byte-identical to the scored submission. The damaged V21 components are not used.",
+  "limits": "Small selected gain on reused development dates; conditional interval crosses zero and excludes selection, training and distribution-shift uncertainty. Weekday/forward checks omit unchanged V17 and V20 neural components. No public-score or rank guarantee."
+}

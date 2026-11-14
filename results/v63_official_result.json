@@ -1,0 +1,19 @@
+{
+  "version": "v63",
+  "official_auc": 0.832698,
+  "reported_at": "2026-10-30 19:49 Europe/Dublin",
+  "source": "Faith supplied portal submission and leaderboard text; not a live portal scrape",
+  "previous_best": "v51",
+  "previous_best_auc": 0.832677,
+  "official_gain": 2.1e-05,
+  "rank": 6,
+  "third_score": 0.832968,
+  "gap_to_third": 0.00027,
+  "fifth_score": 0.832796,
+  "gap_to_fifth": 9.8e-05,
+  "first_score": 0.833064,
+  "gap_to_first": 0.000366,
+  "remaining_attempts_reported": 6,
+  "remaining_attempts_verified_live": false,
+  "portal_uploads_by_agent": 0
+}

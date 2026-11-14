@@ -1,0 +1,64 @@
+{
+  "family": "v27",
+  "mode": "blend",
+  "weight": 0.25,
+  "heads": [
+    {
+      "file": "pooled_head.pt",
+      "sha256": "58cc53c612ead000733cf7dfd932a8c83b976d395b4313a578aa88305a17aad4"
+    }
+  ],
+  "include_old_neural": false,
+  "required_v20_csv_sha256": "3e82021c98bec56bce493b3a56a335b8778e124388293ae5035496bd358c01c5",
+  "data_sha256": {
+    "train.npz": "b52b45caab8a2ee9931bbc2f792d5811f56f8c6af99fb428c889d09f98f992e3",
+    "evaluation.npz": "730eb0485534a15ae5d751195307e8825e34a36d83eaf0bb3f243cdfb568a2ee",
+    "evaluation_rowids.npy": "38a19089ef8dc812b1a0abf0d7d5b2266dd01341e6d222de1aebe1e614c17e51",
+    "audit.json": "2564a30e1161964c04046060845a7eef2b9a18168759cc99c93178978ba804a2"
+  },
+  "cache_sha256": {
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "components.npz": "a9192a5b60fd59aeb4ed125ea3f31cfe5252d57bb4bcc29b11dab19c19b3f6ee",
+    "reproduction.json": "9a1577f8b9d0f301627b006fa126a6c0c04d7dbe11e8da9178a5ce8f3796fee3"
+  },
+  "formula": "0.75*V20 + 0.25*weekday_pooled_neural_head",
+  "training_events": 391710,
+  "training_days": [
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  "full_training_report_sha256": "243ab5b0dfdddfe5e65b221024897042997c0b59920ed3a808534156ea87a9ad",
+  "matched_evidence_sha256": "f32b36b690d7f7a3c0cf82003bcf0361a774adc330ff920d11af7f487a2a9806",
+  "decision": {
+    "candidate": "v27",
+    "incumbent": "v20",
+    "local_gains": {
+      "combined": 6.706623954244595e-05,
+      "earlier": 7.640193681779373e-05,
+      "later": 5.712527442369719e-05
+    },
+    "both_dates_improve": true,
+    "positive_bootstrap_lower_bound": true,
+    "remaining_slots_verified": false,
+    "normal_quality_gate": false,
+    "last_two_quality_gate": false,
+    "official_score": null,
+    "portal_uploads": 0,
+    "status": "exploratory_release_selected",
+    "normal_gate_override": true,
+    "authorisation": "User standing instruction: keep going until there is a candidate; if none clears the normal threshold, try an exploratory attempt. Current request asks for next versions.",
+    "selection_reason": "V27 has the largest selected both-date gain among V25\u2013V27. One fixed V28 memory addition regressed the later date and was rejected.",
+    "weights": {
+      "v20": 0.75,
+      "weekday_pooled_head": 0.25
+    },
+    "friday_independent_validation_of_full_v27": false,
+    "official_incumbent": "v20",
+    "official_incumbent_auc": 0.832548
+  },
+  "source_sha256": "6b6dd65188e0686abc4e5d51d4beed5121081b45969d3949cb6263fd61a6e583",
+  "limitations": "Exploratory below unchanged normal AUC threshold. Reused weekend evaluation; weekday calibration labels are training data, not independent validation of V27. Official score unknown."
+}

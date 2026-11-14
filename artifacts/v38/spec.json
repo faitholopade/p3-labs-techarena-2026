@@ -1,0 +1,61 @@
+{
+  "authorization": "After receiving the V34-V37 hold report, the user requested: come on give me next submission we need to get back to p3 minimum and hold it. Prepare the strongest available unsubmitted candidate despite the disclosed uncertainty. Manual portal upload remains with the user.",
+  "conditional_interval_95_percent": [
+    -6.76504410163925e-06,
+    3.1706607842021946e-05
+  ],
+  "created_on": "2026-10-29",
+  "dependency_canonical_sha256": {
+    "src/calibration_model.py": "c5528e74eac7a7c34f1df2ead280384b675f781759fdfecf1ef11d243fb9ca9b",
+    "src/flexible_tree.py": "bf72495850fcd9d3addd120513c34d5cf838a42fc067b7732ff040ca0b414ed6",
+    "src/v25_exposure_memory.py": "1df32caf62ac7f2ee29b49903d1807e2d5a9a5e2cb293530300af70ad7f8eddb",
+    "src/v30_tree.py": "222d465ddb089ba4e6af09de48442072fdc0ad56dac7e5ce2cda4065304489ed",
+    "src/validate_submission.py": "1a9add6a2f7824fd39fc3ad0786b717ca074ec1eb4e65eb597ef0c0481d2a2c2"
+  },
+  "evidence_sha256": "7aaae85be13a935f0b342b4a2c7c352fccec134810769623c831b39fb1391c01",
+  "formula": "0.875*(V33 + 0.07177734375*(four_day_tree-old_expanded700_tree)) + 0.125*slate_head",
+  "forward_component_gain": -5.051455727667076e-05,
+  "forward_sha256": "99f9252df49dff737e51fec7d47412fc526b22bf549cffc8a860c18e6956ddcf",
+  "incumbent": "v33",
+  "limits": "Exploratory local gain on repeatedly reused data is not a public-score forecast. The conditional bootstrap interval crosses zero. Weekday and forward diagnostics omit unchanged historical components; forward checking tests feature/architecture changes rather than the larger calibration training window. No rank or score improvement is guaranteed.",
+  "local_gain_vs_v33": 1.2468299462997656e-05,
+  "normal_quality_gate": false,
+  "official_incumbent_auc": 0.832616,
+  "official_score": null,
+  "plan_sha256": "c883b67f75ad3dd508aa650ea94b9c23bff482e05dd9c9ee930dda16aa4ac0b5",
+  "portal_uploads": 0,
+  "positive_bootstrap_lower_bound": false,
+  "recipe": "tree_plus_slate",
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "required_v20_csv_sha256": "3e82021c98bec56bce493b3a56a335b8778e124388293ae5035496bd358c01c5",
+  "required_v27_csv_sha256": "3cda208bb200f6b250a24a9b328cd42999bf801dd64dfb697c28c3aeae2070f6",
+  "required_v29_csv_sha256": "21715eadd8a4be4545012fc7769f48c4d3845b1e6825cfde608af402d4949326",
+  "required_v31_csv_sha256": "e27d314e3da4d5f895d404a2e1450893e7b68116a5464066d72cdc5b426dd5e8",
+  "required_v33_csv_sha256": "29843af0d37c56ed095306002e01d44abcda9b52bc78ae7d94a2708e17180507",
+  "required_v33_spec_sha256": "40e2b941870c291a5d64a030c1dc229be00b6aee07986b1062f772dc893147cb",
+  "scarce_slot_quality_gate": false,
+  "selection_sha256": "655437f2fedc3443dfcf7663a42385abd9990c7eb1d097726c8e15aaf6a4a749",
+  "slate_head": {
+    "path": "artifacts/v38/slate_head.pt",
+    "sha256": "6b3182ee16a6d3cac18612d98e9da18134b47768d406766406a4b2345b709a56"
+  },
+  "slate_weight": 0.125,
+  "source_sha256": {
+    "src/infer_v38.py": "a4dbdcf0f471b14ac26897633b7e0d8131dae50e44c91da314e03ab75f25d0d5"
+  },
+  "training_events": 391710,
+  "training_reports_sha256": {
+    "slate": "09ce554c3340e58250eec7868c002a32294a0929956cecc107bb7baad9a098d1",
+    "tree": "8de244c2d7eaa8851888b9941fbd084fcaa53719f0ae9eefaa431ae52d87e0aa"
+  },
+  "tree": {
+    "path": "artifacts/v38/tree.txt",
+    "sha256": "aca377aca345fd092b43849e5d898dd5b3deed9599b59949c1457c08ff285b9d"
+  },
+  "tree_replacement_weight": 0.07177734375,
+  "tree_training_spec": {
+    "path": "artifacts/v38/tree_training_spec.json",
+    "sha256": "e2b94e7292e81a50035aa5bd0da309bfea84a39b607826b853288692b9357f3c"
+  },
+  "version": "v38"
+}

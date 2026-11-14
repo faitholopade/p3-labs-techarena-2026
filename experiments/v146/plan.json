@@ -1,0 +1,26 @@
+{
+  "version": "V146",
+  "hypothesis": "The newly trained causal LightGBM probability heads may improve the incumbent directly, even if extra latent coordinates do not improve their paired contrast. This evaluates complete new predictors, not only V145 added-feature contrasts.",
+  "models": [
+    "control7",
+    "latent7",
+    "control15",
+    "latent15"
+  ],
+  "training": "Exactly V145 frozen causal training recipes; no new training or tuning on primary queries.",
+  "recipes": {
+    "logit_blend_weights": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "choice_blend_weights": [
+      0.25,
+      0.5
+    ]
+  },
+  "selection": "Primary >=+.00005, all calendar slices nonnegative, nonworse logloss; same frozen recipe positive on each secondary date before production.",
+  "reference": "V142 proxy. Report standalone head AUC as diagnostic and keep all blends. No private test outcomes used.",
+  "limits": "Plan recorded after fitting began but before any V145/V146 query outcome scores. Reused development data. Exact V142 heldout heads missing.",
+  "portal_uploads": 0
+}

@@ -1,0 +1,21 @@
+{
+  "version": "v65",
+  "official_auc": 0.8327,
+  "reported_at": "2026-10-30 20:20 Europe/Dublin",
+  "source": "Faith supplied portal submission and leaderboard text; not a live portal scrape",
+  "previous_best": "v63",
+  "previous_best_auc": 0.832698,
+  "official_gain": 2e-06,
+  "rank": 6,
+  "third_team": "free lunch",
+  "third_score": 0.832968,
+  "gap_to_third": 0.000268,
+  "fifth_team": "CSDT",
+  "fifth_score": 0.832796,
+  "gap_to_fifth": 9.6e-05,
+  "first_score": 0.833064,
+  "gap_to_first": 0.000364,
+  "remaining_attempts_reported": 5,
+  "remaining_attempts_verified_live": false,
+  "portal_uploads_by_agent": 0
+}

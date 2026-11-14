@@ -1,0 +1,33 @@
+{
+  "version": "V137",
+  "hypothesis": "A separate learned low-rank user-item residual can capture preference structure omitted by the incumbent fixed8D preference/exposure factors. This changes model capacity across the population.",
+  "baseline": "Exact public-best V136; primary and weekend proxies from runtime/v136 use V65 plus half-context.",
+  "models": [
+    {
+      "rank": 0,
+      "role": "matched temperature/item-bias continuation control"
+    },
+    {
+      "rank": 8,
+      "role": "new residual factors"
+    },
+    {
+      "rank": 16,
+      "role": "new residual factors"
+    }
+  ],
+  "training": "Frozen catalog/user mean utility offsets. Real clicked slates plus unique prewindow warm clicks with9 sampled exposure-pool alternatives. Warm loss weight2. Same batches and random negatives for all3 models.8 fixed epochs, Adam lr.02 cosine decay, batch4096; residual L2 precision3 and item-bias precision20, global log-temperature quadratic penalty.",
+  "initialization": "First16 normalized sparse real conditional-residual SVD dimensions, n_iter7 seed137026; per-coordinate initial scale.1 after sqrt(population) scaling.",
+  "recipes": {
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "cap": 0.3,
+    "delta": "Treated conditional logits minus matched control, center within10 candidates then .3*tanh(delta/.3); preserve V136 event mass."
+  },
+  "screen": "Primary gain>=.00005, first day and delayed positive, third day nonnegative, nonworse logloss. Require matched weekend and both dates positive. Retain all results. No public score claim.",
+  "limits": "Reused V136 proxy development data; exact V108/V136 held-out head unavailable.",
+  "portal_uploads": 0
+}

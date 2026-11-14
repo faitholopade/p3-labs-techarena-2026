@@ -1,0 +1,22 @@
+{
+  "version": "V140",
+  "hypothesis": "Scalar item-factor uncertainty treats well-observed and weakly-observed directions equally. Historical slate Fisher curvature can orient catalog uncertainty while preserving total tangential variance and all fitted means.",
+  "method": "Item-only8x8 block Fisher with Gaussian prior precision.25, all real slates and warm clicked slates sampled from historical exposure pool with weight2. Project inverse precision into each mean vector tangent plane, rescale tangent trace to7, add radial unit variance.",
+  "shrinkages": [
+    0.5,
+    1.0
+  ],
+  "modes": [
+    "choice",
+    "joint"
+  ],
+  "strengths": [
+    0.5,
+    1.0
+  ],
+  "cap": 0.3,
+  "sampling": "256 common antithetic Sobol draws; baseline original scalar item posterior sampled in same pass.",
+  "screen": "Primary >=.00005 and all calendar slices nonnegative and nonworse logloss; freeze one recipe before secondary where combined and both dates must gain.",
+  "limits": "Approximate block posterior; reused V136 proxy development data, not exact V136 heldout head.",
+  "portal_uploads": 0
+}

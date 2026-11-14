@@ -1,0 +1,19 @@
+{
+  "version": "V144",
+  "hypothesis": "NCE exposure-user estimates contain information beyond linear display profiles even though replacing the item catalog failed. Use those estimates only to improve exposure-user prior means.",
+  "model": "Crossfit5 user folds, dense users>=10 historical events. Ridgealpha10 mapping to fitted exposure-user8D means, comparing linear profile control to augmented profile/display80 v/vnormalized/vnorm features.",
+  "update": "Original exposure-user mean plus posterior_variance/.5*(new_prior-old_prior), marginal std unchanged; all catalog/preference/bias parameters unchanged.",
+  "recipes": {
+    "modes": [
+      "choice",
+      "joint"
+    ],
+    "strengths": [
+      0.5,
+      1.0
+    ]
+  },
+  "screen": "Primary+.00005 and all slices nonnegative and nonworse logloss; both secondary dates positive before production.",
+  "limits": "Adaptive after V143; reused V142 proxies; priors use held-user targets only; no exact V142 heldout head.",
+  "portal_uploads": 0
+}

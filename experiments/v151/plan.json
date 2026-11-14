@@ -1,0 +1,15 @@
+{
+  "version": "V151",
+  "classification": "One fixed exploratory combination",
+  "recipe": [
+    "V147 full intercept correlation, choice strength1",
+    "V149 deterministic4-context item correction precision32, strength.25"
+  ],
+  "combination": "Add the already bounded conditional utility corrections to exact V142, renormalizewithin event and preserve mass. No weight search.",
+  "rationale": "The two primary development error patterns are complementary: uncertainty correction positive first/day delayed but negative third; deterministic context correction positive first/third but negative delayed. This is adaptive model selection and will be disclosed.",
+  "confirmation": "Require combined primary and each calendar slice positive and nonworse logloss; then both matched weekend dates and combined positive and nonworse logloss. Paired user bootstrap reported; original+.00005 and+.0001 thresholds unchanged and not claimed met.",
+  "freeze": "Recipe recorded before combination primary or new V149 secondary outcomes. No tuning after those results.",
+  "authorization": "Standing user permission for exploratory attempts. No public or rank guarantee.",
+  "limits": "Repeated reused development data, adaptive combination; V142 proxies rather thanexact V142 heldout heads.",
+  "portal_uploads": 0
+}

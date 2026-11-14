@@ -1,0 +1,25 @@
+{
+  "version": "V147",
+  "hypothesis": "Posterior uncertainty in whether a user clicks can be correlated with their item preferences and exposure affinity. Existing16D user covariance experiments omitted the scalar click-propensity intercept.",
+  "method": "17D real-slate Fisher for8 spherical preference coordinates,8 exposure coordinates,and1 common item-vs-no-click intercept; priors .25/1/1. Invert precision and normalize to correlation; preserve fitted preference/exposure marginal stds and use Laplace intercept std.",
+  "paired_control": "Same17D marginal uncertainties and full16D preference/exposure block; only intercept cross-correlations zeroed. Treatment retains half/full intercept cross-correlations. This isolates new dependence rather than marginal-variance changes.",
+  "prediction": "256 common antithetic97D Sobol draws; frozen means/catalog/global parameters; past real events only; no heldout labels.",
+  "recipes": {
+    "correlation_strength": [
+      0.5,
+      1.0
+    ],
+    "modes": [
+      "choice",
+      "joint"
+    ],
+    "strengths": [
+      0.5,
+      1.0
+    ],
+    "cap": 0.3
+  },
+  "screen": "Primary >=+.00005, all calendar slices nonnegative, nonworse logloss; freeze before secondary and require each date positive.",
+  "limits": "Approximate Fisher posterior, warm likelihood not used in curvature; original fitted marginal variances retain warm information. Reused V142 proxies, not exact V142 heldout heads.",
+  "portal_uploads": 0
+}

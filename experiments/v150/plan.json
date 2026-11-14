@@ -1,0 +1,20 @@
+{
+  "version": "V150",
+  "classification": "Exploratory fallback confirmation",
+  "recipe": {
+    "source": "V147",
+    "correlation": 1.0,
+    "mode": "choice",
+    "strength": 1.0
+  },
+  "selection": "Largest V147 primary gain+.0000226076 before secondary testing; positive first-day and delayed AUC, better logloss; third-day loss-.0000111426 retained.",
+  "failed_original_gates": [
+    "Primary gain below+.00005",
+    "Third-day AUC regression",
+    "Normal minimum+.0001"
+  ],
+  "authorization": "Standing user authorization for exploratory attempts; original failures are not relabeled as passes.",
+  "confirmation": "Must improve both matched weekend dates and combined AUC, with nonworse logloss. Inspect400-replicate user bootstrap intervals. No additional tuning after selection. V149 continues as a separate larger-change test; if it passes all original gates, prefer it.",
+  "limits": "Reused V142 validation proxies, no exact V142 heldout heads; primary last-day regression; approximate17D Fisher posterior. No claim of P3 or public improvement.",
+  "portal_uploads": 0
+}

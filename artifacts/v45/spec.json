@@ -1,0 +1,91 @@
+{
+  "version": "v45",
+  "created_on": "2026-10-30",
+  "recipe": {
+    "name": "replace_both",
+    "mode": "replace_both"
+  },
+  "incumbent": "v38",
+  "official_incumbent_auc": 0.832634,
+  "official_score": null,
+  "portal_uploads": 0,
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "authorization": "After receiving the V34-V37 hold report, the user requested: come on give me next submission we need to get back to p3 minimum and hold it. Prepare the strongest available unsubmitted candidate despite the disclosed uncertainty. Manual portal upload remains with the user. User renewed the next-submission request after V43, then emphasized speed and the fall to sixth.",
+  "formula": "V38 + 0.109375*(six_day_plain-old_small) + 0.125*(six_day_slate-old_slate)",
+  "new_heads": [
+    {
+      "name": "plain_20261029",
+      "path": "artifacts/v45/plain_head.pt",
+      "sha256": "d9b5562e9abfe92827ab6677492c112d094bbb237fc94a7c3b4b5285a6238cb9",
+      "seed": 20261029,
+      "width": 32,
+      "architecture": "plain",
+      "training_events": 588310
+    },
+    {
+      "name": "slate_20261029",
+      "path": "artifacts/v45/slate_head.pt",
+      "sha256": "c178ce761f6e596ce95c09070199702dceb74250ed76b9b736dd95917c476012",
+      "seed": 20261029,
+      "width": 32,
+      "architecture": "set",
+      "training_events": 588310
+    }
+  ],
+  "training_events": 588310,
+  "required_v38_spec_sha256": "37817f330cfe534c7256d3d3b45f5c116adf64623ab460c4a18b6e120d1c941f",
+  "required_v38_csv_sha256": "95ef7daab9ec97ff6260d1d195bd28889e63f6c3b20b1cbbfafe7a02a56b38b3",
+  "source_sha256": {
+    "src/infer_v45.py": "0e89bd626127217fb1086d039d646bf190cbe0959f262e8a871e0a46d5311f2c",
+    "src/infer_v38.py": "a4dbdcf0f471b14ac26897633b7e0d8131dae50e44c91da314e03ab75f25d0d5"
+  },
+  "dependency_canonical_sha256": {
+    "src/calibration_model.py": "c5528e74eac7a7c34f1df2ead280384b675f781759fdfecf1ef11d243fb9ca9b",
+    "src/flexible_tree.py": "bf72495850fcd9d3addd120513c34d5cf838a42fc067b7732ff040ca0b414ed6",
+    "src/v25_exposure_memory.py": "1df32caf62ac7f2ee29b49903d1807e2d5a9a5e2cb293530300af70ad7f8eddb",
+    "src/v30_tree.py": "222d465ddb089ba4e6af09de48442072fdc0ad56dac7e5ce2cda4065304489ed",
+    "src/validate_submission.py": "1a9add6a2f7824fd39fc3ad0786b717ca074ec1eb4e65eb597ef0c0481d2a2c2"
+  },
+  "training_source_sha256": {
+    "scripts/prepare_v45_calibration.py": "03a2c03d069be5dc941c77e631c018b56bca39d5f8c3b1b86143e14269a5feca",
+    "scripts/research_v45.py": "886c755ae0bac6b6ae46235d6b73e7d953932d9c3695bf5f28428ddf11f3e83b",
+    "scripts/run_v45_compact_folds.py": "04c51281def7c7a299cc99638e418cce1019baed1e15fc224b241209ca666766",
+    "scripts/run_v45_compact_forward.py": "05925f902ab9a3278ce4124c621db72d7fe10eaef609f3c1f1aed3bf7d56ce14",
+    "scripts/fit_v45_full.py": "da3c00bdd751d3c725e6b3caf143d874945720026a07da0effe97e296dfca963",
+    "src/v33_training.py": "ce0d3005b762a6782f9baff0b2d1f20c73d199c79a2e7490a6cef04641ed31f9",
+    "src/v45_training.py": "ca7e88d71e10c9660a334bf04a594b8f290e607062a787b65cf4e4227afcb0f4",
+    "src/v45_compact_training.py": "22849cd6f2e9683e241df9bfd26c06402942e21817ed7607f14ef187e883ae10"
+  },
+  "plan_sha256": "556ae2239aada7ff7dfd15a7dcf5587b251b03d804220b62eec85ef58851db6a",
+  "control_clarification_sha256": "1adb59ee6acdc6536f4fe67028288258abb7030e794a5241daa543df49b20774",
+  "selection_sha256": "35c780417c0d7d02d1c24f9dade50bf5b61275290e6cac6b49a5ab2d8f3e1ddb",
+  "release_decision_sha256": "145b6d7a8e86fc821c9fbbb60552f915efbe48f2325e0b4e43dfa36c39ec13db",
+  "evidence_sha256": "eee1c047feb8b66475d820feb07f97d74888630376b88db196b5f79b9cec2263",
+  "local_gain_vs_v38": 2.803616567237377e-05,
+  "local_gains": {
+    "combined": 2.803616567237377e-05,
+    "earlier": 5.364748944292064e-05,
+    "later": 3.7435595144907907e-06
+  },
+  "weekday_component_gains": {
+    "thursday": 0.0002707077173306205,
+    "friday": 0.00017996095015593294
+  },
+  "conditional_interval_95_percent": [
+    -3.6975481756684746e-07,
+    5.664267901613894e-05
+  ],
+  "forward_component_gain": 0.0004840002695233325,
+  "forward_sha256": "214b39e5a88667a55eb4fbc99461e70e87500e208fe8de8d488531be11602474",
+  "frozen_screen_passed": false,
+  "normal_quality_gate": false,
+  "scarce_slot_quality_gate": false,
+  "positive_bootstrap_lower_bound": false,
+  "cache_sha256": {
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "components.npz": "e934710c71a580d05d08dff21ddbf4948b7999a8ca9f7f20cd61f1bb72ee0192"
+  },
+  "cache_provenance": "Verified rebuilt V38 cache; fresh parent inference reproduced the scored V38 CSV byte for byte.",
+  "limits": "Below frozen +0.000050 screen and normal/scarce release gates. Conditional interval crosses zero and excludes selection and distribution-shift uncertainty. Weekday/forward diagnostics omit unchanged historical components. Replacement of the small branch also changes width from 16 to 32. No public gain or rank guarantee."
+}

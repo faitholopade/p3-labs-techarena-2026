@@ -1,0 +1,35 @@
+{
+  "version": "V148",
+  "hypothesis": "An item may have its own time-of-day/weekend preference pattern independent of its8D latent coordinates. Existing global-coordinate context corrections and raw smoothed CTR features may miss these conditional residual item-context effects.",
+  "training": "All past clicked real slates plus unique prewindow warmclicks with9 historical exposure-pool alternatives, warmweight1. Frozen16D mean utility offsets. Matched global item-bias and separate warm-source item-bias nuisance control. Treatments add centered per-item4-context or8-context effects.",
+  "models": {
+    "contexts": [
+      4,
+      8
+    ],
+    "context_prior_precisions": [
+      8,
+      32
+    ],
+    "global_prior_precision": 20,
+    "warm_nuisance_prior_precision": 20,
+    "epochs": 8,
+    "learning_rate": 0.02,
+    "batch": 2048,
+    "optimizer": "Adam cosine decay to.004",
+    "seed": 148026
+  },
+  "recipes": {
+    "strengths": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "mode": "conditional choice",
+    "cap": 0.3
+  },
+  "application": "Treatment real-source logits minus matched control, bounded and centered through conditional normalization; preserve exactV142 event mass.",
+  "screen": "Primary at least+.00005 with all calendar slices nonnegative and nonworse logloss; freeze one recipe before secondary, require both dates and combined positive.",
+  "limits": "Warm alternatives approximated from historical exposure pools; reused V142 proxies, exact V142 heldout heads unavailable.",
+  "portal_uploads": 0
+}

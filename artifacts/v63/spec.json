@@ -1,0 +1,77 @@
+{
+  "version": "v63",
+  "created_on": "2026-10-30",
+  "incumbent": "v51",
+  "official_incumbent_auc": 0.832677,
+  "official_score": null,
+  "portal_uploads": 0,
+  "recipe": {
+    "name": "old_both_full",
+    "narrow": 0,
+    "plain": 0,
+    "base": 1,
+    "memory": 1
+  },
+  "formula": "V51 plus fixed transfers from the selected narrow/plain/remaining-old branches into the selected query head; weights 0.095703125, 0.109375, 0.0478515625, 0.0478515625.",
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "authorization": "Standing request to prepare the strongest supported next exploratory submission, renewed after official V51. Manual portal upload remains with Faith.",
+  "normal_quality_gate": false,
+  "last_two_quality_gate": false,
+  "positive_bootstrap_lower_bound": true,
+  "required_v51_spec_sha256": "2ba5e10050a982cdb6c25abb9dbc6c1ad82cadbbbd8e1de7606a25a81f93bd99",
+  "required_v51_csv_sha256": "9515eab7d5807095f1221a734363d5021bc2ff1c464f655eb81f5b0f76fb9ef1",
+  "required_v45_spec_sha256": "8b58d3e8022cdd4d86f9cb5c1820cc85f83d3b6836d7435621c68d1ca257506e",
+  "required_v45_csv_sha256": "d7d32d8a58fe5371fef288916d3749f1fe6c4711ec9ec4145c6102e173cf8a7b",
+  "required_v38_spec_sha256": "37817f330cfe534c7256d3d3b45f5c116adf64623ab460c4a18b6e120d1c941f",
+  "required_v38_csv_sha256": "95ef7daab9ec97ff6260d1d195bd28889e63f6c3b20b1cbbfafe7a02a56b38b3",
+  "source_sha256": {
+    "src/infer_query_six_day.py": "a75e2f8b4a941cda2339bdc5f6160601b6997e599ff318f0a73aac1f2871e6b2",
+    "src/user_response.py": "bc724834d3eeef3196ddb0d548c44ab5cb899224b6422714072dc90a3cdf9332",
+    "src/first_query_adaptation.py": "4dcd47be460c50188fa35a9ff92c27e3ba431b138eddfde67877ef13777a895f",
+    "src/linear_calibration.py": "ecddf1ee17577fce1c0e2fbb641d14a12f8a691c92ebf33f952ea6ef224f9394",
+    "src/bounded_history.py": "32c644ff8fde7bca684c7a5bd7323c5fe23c1876b879f8c8e4958c029e500b2e",
+    "src/sequence_calibration.py": "a0196bda28b03a6434249d5a93753666bb0bcb3b8b9e8392aefd18b55fcfa6f2",
+    "src/query_context_features.py": "39bcf7a36687c0f00a6323db6b9561ae5cad71ee063ef4eae0cc686c7264b624",
+    "src/infer_narrow_six_day.py": "4cad031efb7975c1c5410148052ebfcd157a39669e633de9334cfbcbf2d8eae7",
+    "src/infer_v45.py": "0e89bd626127217fb1086d039d646bf190cbe0959f262e8a871e0a46d5311f2c",
+    "src/infer_v38.py": "a4dbdcf0f471b14ac26897633b7e0d8131dae50e44c91da314e03ab75f25d0d5"
+  },
+  "dependency_canonical_sha256": {
+    "src/calibration_model.py": "c5528e74eac7a7c34f1df2ead280384b675f781759fdfecf1ef11d243fb9ca9b",
+    "src/flexible_tree.py": "bf72495850fcd9d3addd120513c34d5cf838a42fc067b7732ff040ca0b414ed6",
+    "src/v25_exposure_memory.py": "1df32caf62ac7f2ee29b49903d1807e2d5a9a5e2cb293530300af70ad7f8eddb",
+    "src/v30_tree.py": "222d465ddb089ba4e6af09de48442072fdc0ad56dac7e5ce2cda4065304489ed",
+    "src/validate_submission.py": "1a9add6a2f7824fd39fc3ad0786b717ca074ec1eb4e65eb597ef0c0481d2a2c2"
+  },
+  "cache_sha256": {
+    "raw.npy": "cf2b2eb541b6facd632927c169ab150f63841302d26fd821b717b94d38b384a1",
+    "names.json": "84f8244c6fc077b7f0f0bbf2d1336d0023eafab4d7b975e299b77531caa29761",
+    "components.npz": "e934710c71a580d05d08dff21ddbf4948b7999a8ca9f7f20cd61f1bb72ee0192"
+  },
+  "training_events": 210588,
+  "feature_mode": "first_query_adaptation",
+  "architecture": "plain",
+  "width": 16,
+  "local_gains": {
+    "combined": 1.7312076486697414e-05,
+    "earlier": 2.5373808904660677e-05,
+    "later": 8.88803697352003e-06
+  },
+  "logloss_change": -5.669698391663758e-06,
+  "weekday_component_gains": {
+    "thursday": 2.170695599612582e-05,
+    "friday": 1.5212217161830743e-05
+  },
+  "forward_component_gain": 1.5231334251630813e-06,
+  "conditional_interval_95_percent": [
+    3.4772165809382473e-06,
+    3.159826711877367e-05
+  ],
+  "plan_sha256": "674185ec966f70e242a2a87facc8f30e1a992a2bd912045568b3810e23755646",
+  "research_source_sha256": "fd5136bdb9d8da75bdf1d024f7bfa8bda596a96d64d842f79c959a2e4aaa5476",
+  "limits": "Repeated development use. Other-user calibration dates are pooled. Weekday and forward checks omit unchanged V17/V20 components. Bootstrap is conditional on the selected recipe and excludes selection and public-distribution uncertainty. No promised public gain or rank.",
+  "new_head": {
+    "path": "artifacts/v63/query_head.pt",
+    "sha256": "4ede0115df8b083a420c9d4628b582eb6e794e568641022101282bea3eb8afc3"
+  }
+}

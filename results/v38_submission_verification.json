@@ -1,0 +1,31 @@
+{
+  "version": "v38",
+  "rows": 529390,
+  "filename": "P3_Labs_submission_v38.csv.zip",
+  "bytes": 14175051,
+  "sha256": "eb6c1a1a6c411aa3768c1d62adacf866e093bf4779ab2db3ab76f31c9d3d9316",
+  "csv_sha256": "95ef7daab9ec97ff6260d1d195bd28889e63f6c3b20b1cbbfafe7a02a56b38b3",
+  "files": 1,
+  "zip_crc_valid": true,
+  "reference_order_matches": true,
+  "finite_probabilities_in_range": true,
+  "second_inference_exact": true,
+  "component_formula_exact": true,
+  "convex_max_abs_error": 3.3306690738754696e-16,
+  "scored_parents_reproduced": {
+    "v20": "3e82021c98bec56bce493b3a56a335b8778e124388293ae5035496bd358c01c5",
+    "v27": "3cda208bb200f6b250a24a9b328cd42999bf801dd64dfb697c28c3aeae2070f6",
+    "v29": "21715eadd8a4be4545012fc7769f48c4d3845b1e6825cfde608af402d4949326",
+    "v31": "e27d314e3da4d5f895d404a2e1450893e7b68116a5464066d72cdc5b426dd5e8",
+    "v33": "29843af0d37c56ed095306002e01d44abcda9b52bc78ae7d94a2708e17180507"
+  },
+  "mean_absolute_probability_change_vs_v33": 0.0005164993024141924,
+  "max_absolute_probability_change_vs_v33": 0.016802776945756603,
+  "release_mode": "explicit_user_requested_exploratory_attempt",
+  "normal_quality_gate": false,
+  "positive_bootstrap_lower_bound": false,
+  "limits": "Two exact reruns use the verified V20 cache; the historical parent chain was not retrained. Exploratory release with uncertainty interval crossing zero.",
+  "purpose": "Competition upload: exactly one CSV.",
+  "official_score": null,
+  "portal_uploads": 0
+}

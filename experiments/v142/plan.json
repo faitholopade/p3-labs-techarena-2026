@@ -1,0 +1,15 @@
+{
+  "version": "V142",
+  "status": "exploratory confirmation, not normal release",
+  "source": "V141 shared weekend preference model with fixed strength0.5",
+  "selection": "Shared model at half strength: primary+0.0000193919, every primary calendar slice positive and nonworse logloss. Byhour full differs by under0.000003; choose simpler shared effect at lower strength. No further tuning after this selection.",
+  "unchanged_failed_gates": [
+    "V141 primary minimum+0.00005",
+    "Normal release minimum+0.0001"
+  ],
+  "authorization": "Standing user authorization for exploratory attempts; this is not represented as passing the original gates.",
+  "confirmation": "Both matched weekend dates and combined AUC positive, nonworse logloss; inspect paired-user400-replicate intervals on primary and secondary. If date regressions, no file from this recipe.",
+  "production": "If confirmation supports exploration, fit same shared model on all pre-evaluation history and transfer0.5*bounded centered weekend delta to exact scored V136 CSV. Keep mass and row ordering.",
+  "limits": "Reused development V65+half-hour V136 proxies, exact V136 heldout model missing; warm alternatives approximate; no guaranteed public gain or rank.",
+  "portal_uploads": 0
+}

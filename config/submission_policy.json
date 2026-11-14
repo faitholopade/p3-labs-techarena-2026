@@ -1,0 +1,20 @@
+{
+  "policy_version": 1,
+  "created_on": "2026-10-26",
+  "status": "Provisional resource-allocation heuristic; not a statistically calibrated predictor",
+  "daily_submission_limit": 10,
+  "normal_minimum_local_gain": 0.0001,
+  "scarce_slots_at_most": 2,
+  "scarce_slots_minimum_local_gain": 0.0002,
+  "comparison_baseline": "Best official AUC in results/score_history.csv, evaluated on the same rows as the candidate",
+  "required_positive_slices": ["earlier", "later"],
+  "require_positive_paired_user_bootstrap_lower_95_bound": true,
+  "no_slots_action": "hold",
+  "pending_candidates_action": "Continue local development; retain the best submitted model as the comparison baseline",
+  "limitations": [
+    "Thresholds are policy choices informed by a small, selected history, not proven optimal cutoffs.",
+    "Positive development bootstrap intervals do not cover all model-selection or distribution-shift uncertainty.",
+    "The scarce-slot threshold is a deliberate reservation rule, not an estimated statistical boundary.",
+    "Passing this screen does not guarantee public improvement and does not replace submission-file validation."
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "plan": {
+    "version": "v63_first_query_adaptation",
+    "created_on": "2026-10-30",
+    "incumbent": "v51",
+    "official_incumbent_auc": 0.832677,
+    "timing": "Fixed after V61/V62 failed, before any adaptation fits.",
+    "hypothesis": "Adapt the saved six-day plain16 model to first daily user queries while retaining its initialization and normalization from all slates. This addresses evaluation sampling without discarding the broader training fit.",
+    "seed": 20261029,
+    "training": {
+      "epochs": 8,
+      "width": 16,
+      "threads": 3,
+      "rank_weight": 0.5
+    },
+    "features": "Original 388-column six-day features. Training and normalization begin from the exact matching V50 user-fold model. Fine-tuning uses only the first event of each user per day and excludes all held users across every date.",
+    "recipes": [
+      {
+        "name": "narrow_half",
+        "narrow": 0.5,
+        "plain": 0,
+        "base": 0,
+        "memory": 0
+      },
+      {
+        "name": "narrow_full",
+        "narrow": 1,
+        "plain": 0,
+        "base": 0,
+        "memory": 0
+      },
+      {
+        "name": "plain_half",
+        "narrow": 0,
+        "plain": 0.5,
+        "base": 0,
+        "memory": 0
+      },
+      {
+        "name": "plain_full",
+        "narrow": 0,
+        "plain": 1,
+        "base": 0,
+        "memory": 0
+      },
+      {
+        "name": "old_base_full",
+        "narrow": 0,
+        "plain": 0,
+        "base": 1,
+        "memory": 0
+      },
+      {
+        "name": "old_both_full",
+        "narrow": 0,
+        "plain": 0,
+        "base": 1,
+        "memory": 1
+      }
+    ],
+    "branch_weights": {
+      "narrow": 0.095703125,
+      "plain": 0.109375,
+      "base": 0.0478515625,
+      "memory": 0.0478515625
+    },
+    "selection": "Require >=0.000010 matched combined gain versus V51, both matched dates positive, non-worsening log loss, both weekday component checks positive. Highest eligible gain; within 0.000005 prefer lowest total changed weight, then listed order.",
+    "confirmation": "Only the selected eligible recipe gets the chronological first-Friday check and 400 paired-user bootstrap seed 20261030. No retuning; full fit only after screen passes.",
+    "release": "Normal +0.000100 and scarce +0.000200 plus positive lower-bound gates unchanged. Explicit exploratory exceptions allowed by standing user request; manual portal upload only.",
+    "limits": "Adaptive experiment after V55 first-query training from scratch failed. Base parameters are fine-tuned; daily factors remain causal and unchanged. User-excluded calibration pools other-user dates. Reused development data; no promised public gain or rank.",
+    "portal_uploads": 0,
+    "architecture": "plain",
+    "optimizer": {
+      "lr": 0.0002,
+      "weight_decay": 0.1,
+      "batch_events": 1024,
+      "dropout": 0.1,
+      "average_last_epochs": 3
+    }
+  },
+  "plan_sha256": "674185ec966f70e242a2a87facc8f30e1a992a2bd912045568b3810e23755646",
+  "source_sha256": "fd5136bdb9d8da75bdf1d024f7bfa8bda596a96d64d842f79c959a2e4aaa5476",
+  "baseline_auc": 0.8378178361843427,
+  "results": [
+    {
+      "recipe": {
+        "name": "narrow_half",
+        "narrow": 0.5,
+        "plain": 0,
+        "base": 0,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 6.450372458721709e-06,
+        "earlier": 5.538513141112311e-06,
+        "later": 7.322273044341188e-06
+      },
+      "logloss_change": -2.782940828366387e-06,
+      "weekday_component_gains": {
+        "thursday": 1.139593915433501e-05,
+        "friday": 1.763842533020199e-05
+      },
+      "total_changed_weight": 0.0478515625,
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "narrow_full",
+        "narrow": 1,
+        "plain": 0,
+        "base": 0,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 1.1730168022250353e-05,
+        "earlier": 9.734623864554592e-06,
+        "later": 1.396128131680996e-05
+      },
+      "logloss_change": -5.13077128336259e-06,
+      "weekday_component_gains": {
+        "thursday": 1.7801124067129415e-05,
+        "friday": 3.163130457417562e-05
+      },
+      "total_changed_weight": 0.095703125,
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "plain_half",
+        "narrow": 0,
+        "plain": 0.5,
+        "base": 0,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 9.552083056085792e-06,
+        "earlier": 8.728534867441518e-06,
+        "later": 1.046608247445846e-05
+      },
+      "logloss_change": -3.744955815038198e-06,
+      "weekday_component_gains": {
+        "thursday": 1.192451966647301e-05,
+        "friday": 2.2985253962826135e-05
+      },
+      "total_changed_weight": 0.0546875,
+      "eligible": false
+    },
+    {
+      "recipe": {
+        "name": "plain_full",
+        "narrow": 0,
+        "plain": 1,
+        "base": 0,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 1.6091884744717788e-05,
+        "earlier": 1.444233287961616e-05,
+        "later": 1.7930139440847093e-05
+      },
+      "logloss_change": -6.397212859748924e-06,
+      "weekday_component_gains": {
+        "thursday": 1.1113583135324845e-05,
+        "friday": 3.517946432141095e-05
+      },
+      "total_changed_weight": 0.109375,
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "old_base_full",
+        "narrow": 0,
+        "plain": 0,
+        "base": 1,
+        "memory": 0
+      },
+      "gains": {
+        "combined": 1.1631823092939086e-05,
+        "earlier": 1.7296448508674622e-05,
+        "later": 6.0717361219930766e-06
+      },
+      "logloss_change": -3.956799807358635e-06,
+      "weekday_component_gains": {
+        "thursday": 1.5152222836101181e-05,
+        "friday": 7.926389115620047e-06
+      },
+      "total_changed_weight": 0.0478515625,
+      "eligible": true
+    },
+    {
+      "recipe": {
+        "name": "old_both_full",
+        "narrow": 0,
+        "plain": 0,
+        "base": 1,
+        "memory": 1
+      },
+      "gains": {
+        "combined": 1.7312076486697414e-05,
+        "earlier": 2.5373808904660677e-05,
+        "later": 8.88803697352003e-06
+      },
+      "logloss_change": -5.669698391663758e-06,
+      "weekday_component_gains": {
+        "thursday": 2.170695599612582e-05,
+        "friday": 1.5212217161830743e-05
+      },
+      "total_changed_weight": 0.095703125,
+      "eligible": true
+    }
+  ],
+  "selected": {
+    "recipe": {
+      "name": "old_both_full",
+      "narrow": 0,
+      "plain": 0,
+      "base": 1,
+      "memory": 1
+    },
+    "gains": {
+      "combined": 1.7312076486697414e-05,
+      "earlier": 2.5373808904660677e-05,
+      "later": 8.88803697352003e-06
+    },
+    "logloss_change": -5.669698391663758e-06,
+    "weekday_component_gains": {
+      "thursday": 2.170695599612582e-05,
+      "friday": 1.5212217161830743e-05
+    },
+    "total_changed_weight": 0.095703125,
+    "eligible": true
+  },
+  "official_score": null,
+  "portal_uploads": 0
+}
